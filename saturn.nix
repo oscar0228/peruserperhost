@@ -4,9 +4,10 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ ./configuration.nix
-    ];
+  imports = [
+    ./configuration.nix
+    ./rogerw.nix
+  ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
