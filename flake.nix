@@ -8,7 +8,7 @@
   outputs = { self, nixpkgs }@inputs:
     {
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
+        saturn = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [ ./configuration.nix];
         };

@@ -91,6 +91,11 @@
     packages = with pkgs; [
   #   thunderbird
     ];
+    openssh = {
+    	authorizedKeys.keys = [
+    		ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBxpo1SH1rlnkGKcdBkfguJww+B6JiLvMH35nUBTlp06 rogerw@saturn
+    	];
+    };
   };
 
   # Install firefox.
@@ -123,10 +128,9 @@
   services.openssh.enable = true;
 
   nix = {
-  	package = pkgs.nixUnstable;
-  	extraOptions = ''
-  	  experimental-features = nix-command flakes
-  	'';
+  	settings = {
+  		experimental-features = "nix-command flakes";
+  	};
   };
 
   # Open ports in the firewall.
