@@ -79,6 +79,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
   #   thunderbird
+    kate
     ];
     openssh = {
     	authorizedKeys.keys = [
