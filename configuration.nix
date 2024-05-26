@@ -87,6 +87,8 @@
      git
      micro
      bitwarden
+    #ungoogled-chromium
+     chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
